@@ -1,121 +1,105 @@
-Overview
-This project provides a PERT (Program Evaluation Review Technique) calculator to manage tasks and their dependencies. 
-It helps to determine the earliest and latest start and finish dates for tasks,
-calculates margins, and identifies the critical path in a project.
 
-Technologies Used
+## Project 2: Simplex Solver
 
+### Overview
 
-C for backend calculations.
-Node.js with Express for the server.
-React.js for the frontend.
+This project provides a Simplex solver for linear programming problems.
+It allows users to input constraints and objective functions and solve for the optimal solution using the Simplex method.
 
+### Technologies Used
 
+- Node.js with Express for the server.
+- React.js for the frontend.
 
+### Prerequisites
 
-Prerequisites
-Node.js and npm installed.
-GCC for compiling C programs.
-Getting Started
-Backend Setup
+- Node.js and npm installed.
 
+### Getting Started
 
+#### Backend Setup
 
+1. **Clone the repository:**
+    ```bash
+    git clone <repository_url>
+    cd <repository_name>
+    ```
 
-Clone the repository:
+2. **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-git clone https://github.com/Momo-azangue/simplex-backend.git
-cd simplex-backend
+3. **Start the backend server:**
+    ```bash
+    node server.js
+    ```
 
+#### Frontend Setup
 
+1. **Navigate to the frontend directory:**
+    ```bash
+    cd frontend
+    ```
 
-Install dependencies:
+2. **Install frontend dependencies:**
+    ```bash
+    npm install
+    ```
 
+3. **Start the frontend application:**
+    ```bash
+    npm start
+    ```
 
-npm install
-Compile the C program:
+### Usage
 
-bash
-Copier le code
-gcc -o pert src/pert.c
-Start the backend server:
+1. **Set Number of Constraints and Variables:**
+    - Navigate to `http://localhost:3001/simplex` in your browser.
+    - Enter the number of constraints and variables.
 
-node server.js
-Frontend Setup
+2. **Input Constraints:**
+    - Enter the coefficients for each constraint and the RHS value.
 
+3. **Input Objective Function:**
+    - Enter the coefficients for the objective function.
 
-Navigate to the frontend directory:
+4. **Solve the Problem:**
+    - Click "Solve" to compute the optimal solution using the Simplex method.
 
+### Example
 
+#### Input Constraints:
+```
+1x1 + 0.5x2 + 1x3 + 0x4 + 0x5 <= 100
+0.2x1 + 0.15x2 + 0x3 + 1x4 + 0x5 <= 25
+0x1 + 1x2 + 0x3 + 0x4 + 1x5 <= 160
+```
 
+#### Input Objective Function:
+```
+1.5x1 + 0.9x2 + 0x3 + 0x4 + 0x5
+```
 
-cd frontend
+#### Output Solution:
+```
+Optimal solution found: x1 = ..., x2 = ..., ...
+```
 
+### Troubleshooting
 
+- Ensure the backend server is running (`node server.js`).
+- Verify the frontend app is running (`npm start` in the frontend directory).
 
-Install frontend dependencies:
+### Contributing
 
+1. Fork the repository.
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`).
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`).
+4. Push to the branch (`git push origin feature/AmazingFeature`).
+5. Open a pull request.
 
-npm install
+### License
 
-
-Start the frontend application:
-
-
-npm run dev
-
-Usage
-
-
-Add Tasks:
-
-Navigate to http://localhost:3001 in your browser.
-
-Enter the task name and duration.
-
-Click "Add Task" to add it to the project.
-
-Add Relations:
-
-Enter the dependent task and its predecessors.
-Click "Add Relation" to establish dependencies between tasks.
-Calculate Dates:
-
-Click "Calculate Dates" to compute the earliest and latest start and finish dates, margins, and identify the critical path.
-
-
-Example
-
-
-Input File (input.txt):
-
-4
-0 Fictive 0
-1 A 20
-2 B 30
-3 C 10
-3
-3 1
-3 2
-2 1
-Output File (output.txt):
-
-0 Fictive 0 0 0 0 0
-1 A 20 0 20 0 0
-2 B 30 20 50 0 0
-3 C 10 50 60 0 0
-
-Troubleshooting
-Ensure the C program is compiled correctly and executable (gcc -o pert src/pert.c).
-Check if the backend server is running (node server.js).
-Verify the frontend app is running (npm start in the frontend directory).
-Contributing
-
-Fork the repository.
-Create your feature branch (git checkout -b feature/AmazingFeature).
-Commit your changes (git commit -m 'Add some AmazingFeature').
-Push to the branch (git push origin feature/AmazingFeature).
-Open a pull request.
-
-
+---
 
