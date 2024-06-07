@@ -130,7 +130,7 @@ int main() {
     // Ajouter une ligne pour la fonction objectif
     int rows = constraints + 1;
     // Ajouter une colonne pour le terme constant
-    int cols = variables ;
+    int cols = variables +1;
 
     SimplexTableau *tableau = createTableau(rows, cols);
     readInput(tableau, input);
