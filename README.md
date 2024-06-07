@@ -55,7 +55,7 @@ It allows users to input constraints and objective functions and solve for the o
 ### Usage
 
 1. **Set Number of Constraints and Variables:**
-    - Navigate to `http://localhost:3001/simplex` in your browser.
+    - Navigate to `http://localhost:3000/simplex` in your browser.
     - Enter the number of constraints and variables.
 
 2. **Input Constraints:**
